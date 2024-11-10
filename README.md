@@ -1,6 +1,6 @@
 # Banking App in ReactJS
->>>>>header
-![Banking App Screenshot](screen.png)
+
+[Banking App Screenshot](screen.png)
 
 # Apna-Bank
 Apna-bank is a full-stack banking web application designed for users to securely manage their finances online. Built with a modern technology stack—React for the frontend, Node.js for the backend, and MongoDB for data storage—it provides a smooth, responsive, and user-friendly experience.
@@ -31,6 +31,5 @@ password: abc123
 ```
 email: client@client.com
 password: abc123
-```
 
->>>footer
+```
