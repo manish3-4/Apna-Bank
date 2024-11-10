@@ -6,7 +6,7 @@ import { TransferPage } from './TransferPage';
 import { BudgetApp } from './BudgetApp';
 
 export const ClientDashboard = (props) => {
-    const { logout, client, setClient } = props;
+    const { client, setClient } = props;
     const [users, setUsers] = useState(props.users);
     const [ page, setPage ] = useState('home');
 

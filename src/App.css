@@ -185,8 +185,7 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(59, 49, 40, .2);
 }
 
-#transactions table tr {
-}
+
 
 #transactions table td:nth-child(1), #transactions table td:nth-child(2), 
     #transactions th td:nth-child(2) {
@@ -381,8 +380,7 @@ input:disabled {
   align-items: center;
 }
 
-.odd {
-}
+
 
 .even {
   background-color: rgba(238, 238, 238, .5);

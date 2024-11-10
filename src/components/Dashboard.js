@@ -65,7 +65,7 @@ export const Dashboard = (props) => {
             accountName={user.fullname} 
             accountNumber={user.number} 
             balance={user.balance} setEditModal={setEditModal} 
-            setIsUpdate={setIsUpdate} setNewAccount={setNewAccount} setIsUpdate={setIsUpdate}  />
+            setIsUpdate={setIsUpdate} setNewAccount={setNewAccount}  />
     }
 
     if(page === 'home') {
