@@ -2,6 +2,9 @@
 
 ![Banking App Screenshot](screen.png)
 
+# Apna-Bank
+Apna-bank is a full-stack banking web application designed for users to securely manage their finances online. Built with a modern technology stack—React for the frontend, Node.js for the backend, and MongoDB for data storage—it provides a smooth, responsive, and user-friendly experience.
+
 The user is a bank employee who manually manages the bank's accounts.
 He does the creation of account manually using the account holders name and sets the initial balance of the account if possible.
 
@@ -31,6 +34,3 @@ password: abc123
 ```
 
 
-=======
-# Apna-Bank
-Bank4U is a full-stack banking web application designed for users to securely manage their finances online. Built with a modern technology stack—React for the frontend, Node.js for the backend, and MongoDB for data storage—it provides a smooth, responsive, and user-friendly experience.
