@@ -1,5 +1,5 @@
 # Banking App in ReactJS
-
+>>>>>header
 ![Banking App Screenshot](screen.png)
 
 # Apna-Bank
@@ -10,7 +10,7 @@ He does the creation of account manually using the account holders name and sets
 
 He also does the withdrawal and deposit manually for each account.
 He also does the transfer of balances if there are requests for it.
-Your task is to help this poor employee out by creating a simple admin banking app
+Your task is to help this poor employee out by creating a simple admin banking app.
 
 
 
@@ -19,7 +19,7 @@ A banking app created with ReactJS.
 
 ## Demo Account Credentials
 
-Use the following credentials to test the app.
+![Use the following credentials to test the app](https://render)
 
 ### For Admin
 ```
@@ -33,4 +33,4 @@ email: client@client.com
 password: abc123
 ```
 
-
+>>>footer
