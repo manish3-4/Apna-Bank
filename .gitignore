@@ -1,6 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+screen.png
+package-lock.json
+package.jaon
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.gitignore
 /node_modules
 /.pnp
 .pnp.js
@@ -17,13 +25,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-screen.png
-package-lock.json
-package.jaon
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.gitignore
 
 
