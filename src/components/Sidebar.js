@@ -64,6 +64,6 @@ export const SideLink = (props) => {
     }
 
     return (
-        <li><a onClick={clickLink} className={ active === page ? 'active' : '' } href="#"><i className={icon} ></i> {text}</a></li>
+        <li><a onClick={clickLink} className={ active === page ? 'active' : '' }><i className={icon} ></i> {text}</a></li>
     )
 }

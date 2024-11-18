@@ -128,7 +128,7 @@ const BudgetModal = (props) => {
     const { saveBudget, updateBudget, setIsModalOpen, title, amount, modalAction, id} = props;
     const [modalValue, setModalValue] = useState({id: id, title: title, amount: amount });
     // add or edit?
-    const [action, setAction] = useState(modalAction);
+    const [action] = useState(modalAction);
 
     const onSubmit = (e) => {
         e.preventDefault();

@@ -35,11 +35,12 @@ export const Dashboard = (props) => {
             });
 
             setUsers(filteredUsers);
-            setDeleteUser(null);
             // save
             localStorage.setItem('users', JSON.stringify(filteredUsers));
+            setDeleteUser(null);
+
         }
-    }, [deleteUser]);
+    }, [deleteUser, users]);
 
     useEffect(() => {
         if(isUpdate) {
@@ -51,11 +52,12 @@ export const Dashboard = (props) => {
             });
 
             setUsers(filteredUsers);
-            setIsUpdate(false);
             // save
             localStorage.setItem('users', JSON.stringify(filteredUsers));
+            setIsUpdate(false);
+
         }
-    }, [isUpdate]);
+    }, [isUpdate, users, newAccount]);
 
     let modal = null;
     if(editingUser !== null && editModal) {
