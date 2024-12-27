@@ -19,7 +19,7 @@ A banking app created with ReactJS.
 
 ## Demo Account Credentials
 
-[Use the following credentials to test the app](https://render)
+[Use this link for demo](https://apnabank-4qir.onrender.com)
 
 ### For Admin
 ```
