@@ -30,6 +30,8 @@ export const LoginPage = (props) => {
             <label htmlFor="password">Password</label>
             <input id="password" autoComplete="off" onChange={onChangePassword} value={password} type="password" />
             <button type="submit" className="btn">Login</button>
+            <h2>Demo Login</h2><a href="https://github.com/manish3-4/Apna-Bank#for-admin" target="_blank">
+            Admin Login Details</a>
           </form>
         </div>
       </div>
