@@ -3,7 +3,7 @@ import { Notif } from "./Notif";
 import { formatNumber, getDateToday } from "./Utils";
 
 export const TransferPage = (props) => {
-    const {isClient, client, setClient} = props;
+    const {isClient, client} = props;
     const [users, setUsers] = useState(props.users); 
     const [receivers, setReceivers] = useState(users);
     const [sender, setSender] = useState( isClient ? client : {balance: 0});
@@ -47,21 +47,16 @@ export const TransferPage = (props) => {
 
     let senders = null;
     if(!isClient) {
-        senders = users.map(user => {
-            return (
-                <option value={user.number}>{user.fullname} #{user.number}</option>
-            )
-        });
+        senders = users.map(user => (
+            <option key={user.number} value={user.number}>{user.fullname} #{user.number}</option>
+        ));
     }
 
-    const newReceivers = receivers.map(receiver => {
-        if(sender.number !== receiver.number) {
-            return (
-                <option value={receiver.number}>{receiver.fullname} #{receiver.number}</option>
-            )
-        }
-        
-    })
+    const newReceivers = receivers
+        .filter(receiver => sender.number !== receiver.number)
+        .map(receiver => (
+            <option key={receiver.number} value={receiver.number}>{receiver.fullname} #{receiver.number}</option>
+        ))
 
     const transferFund = event => {
         event.preventDefault();
@@ -79,8 +74,6 @@ export const TransferPage = (props) => {
                     if(user.balance - amount >= 0) {
                         user.balance -= amount;
 
-                        const transDate = new Date();
-                        console.log(user.transactions);
                         user.transactions.unshift({
                             title: `Fund transfer to ${receiver.fullname} #${receiver.number}`, 
                             amount: amount, 

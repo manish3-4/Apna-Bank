@@ -1,18 +1,15 @@
 import { Account } from "./Account";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const MainContent = (props) => {
-    const users = props.users;
-    const {editingUser, setEditingUser, setEditModal, setDeleteUser} = props;
-    const [isCurrentUserAdmin, setIsCurrentUserAdmin] = useState(false);
-
-    useEffect(() => {
+    const {users, editingUser, setEditingUser, setEditModal, setDeleteUser} = props;
+    const [isCurrentUserAdmin] = useState(() => {
       const localUser = JSON.parse(localStorage.getItem('currentUser'));
-      setIsCurrentUserAdmin(localUser.isAdmin);
-    }, [isCurrentUserAdmin]);
+      return localUser ? localUser.isAdmin : false;
+    });
     
-    const bankAccounts = users.map((user, index) => {
-      return <Account key={index} index={index} fullname={user.fullname} 
+    const bankAccounts = users.map((user, index) => (
+      <Account key={user.number} index={index} fullname={user.fullname} 
         type={user.type} 
         isAdmin={isCurrentUserAdmin} 
         accountNumber={user.number} 
@@ -20,13 +17,11 @@ export const MainContent = (props) => {
         editingUser={editingUser} 
         setEditingUser={setEditingUser} setEditModal={setEditModal} 
         setDeleteUser={setDeleteUser} />
-    });
+    ));
       
     return (
       <section id="main-content">
         {bankAccounts}
       </section>
     )
-    
-  }
-
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const ActionButtons = (props) => {
     const {editingUser, setEditingUser, index, setEditModal, setDeleteUser} = props;
@@ -21,12 +21,12 @@ export const ActionButtons = (props) => {
           setDeleteUser={setDeleteUser} />
       </div>
     )
-  }
+}
   
 export const ActionButton = (props) => {
     const {icon, text, actionType, setEditingUser, index, setEditModal, setDeleteUser} = props;
 
-    const click = (e, index) => {
+    const click = (e) => {
       e.preventDefault();
       
       if(actionType === 'edit') {
@@ -40,6 +40,6 @@ export const ActionButton = (props) => {
     }
 
     return (
-      <button onClick={(e) => click(e, index)}><i className={icon} ></i> {text}</button>
+      <button onClick={click}><i className={icon}></i> {text}</button>
     )
-  }
+}

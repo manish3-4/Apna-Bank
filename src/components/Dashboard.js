@@ -129,7 +129,6 @@ const AccountEditModal = (props) => {
 
     const updateAccount = (e) => {
         e.preventDefault();
-        console.log("Update");
         setNewAccount(account);
         setIsUpdate(true);
         // close modal

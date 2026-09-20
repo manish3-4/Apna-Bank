@@ -88,8 +88,8 @@ export const BudgetApp = (props) => {
         return (
             <div className={`budget-row ${style}`}>
                 <div className="budget-title">
-                    <button type="button" onClick={() => deleteRow(index)} className="mr"><i class='bx bxs-x-square' ></i></button>
-                    <button type="button" onClick={() => editRow(index)} className="mr"><i class='bx bx-edit-alt' ></i></button>
+                    <button type="button" onClick={() => deleteRow(index)} className="mr"><i className='bx bxs-x-square'></i></button>
+                    <button type="button" onClick={() => editRow(index)} className="mr"><i className='bx bx-edit-alt'></i></button>
                     <span onClick={() => editRow(index)}>{item.title}</span>
                 </div>
                 <div>{formatNumber(item.amount)}</div>

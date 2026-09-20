@@ -3,52 +3,22 @@ import { ActionButtons } from "./ActionButtons";
 import { formatNumber } from "./Utils";
 
 export const Account = (props) => {
-    
     const {type, accountNumber, balance, fullname, editingUser, setEditingUser, setDeleteUser, index, isAdmin, setEditModal} = props;
     
     const action = isAdmin ? <ActionButtons index={index} 
       editingUser={editingUser} 
       setEditingUser={setEditingUser} 
-      setEditModal={setEditModal} setDeleteUser={setDeleteUser} /> : '';
+      setEditModal={setEditModal} setDeleteUser={setDeleteUser} /> : null;
     
     return (
       <div className="account">
           <div className="details">
-              <AccountHolder fullname={fullname} />
-              <AccountType type={type} />
-              <AccountNumber accountNumber={accountNumber} />
+              <h1>{fullname}</h1>
+              <h3>{type}</h3>
+              <div>{accountNumber}</div>
               {action}
           </div>
-          <AccountBalance balance={formatNumber(balance)} />
+          <div className="balance">{formatNumber(balance)}</div>
       </div>
     )
-  }
-  
-export const AccountHolder = (props) => {
-    return (
-      <h1>{props.fullname}</h1>
-    )
-  }
-  
-  
-export const AccountType = (props) => {
-    return (
-      <h3>{props.type}</h3>
-    )
-  }
-  
-  
-export const AccountNumber = (props) => {
-    return (
-      <div>{props.accountNumber}</div>
-    )
-  }
-  
-  
-export const AccountBalance = (props) => {
-    const balance = props.balance;
-    return (
-      <div className="balance">{balance}</div>
-    )
-  }
-
+}
